@@ -22,6 +22,7 @@ public class Rope : MonoBehaviour
     
     void Start()
     {
+        //connectedObject = GameObject.Find("Prototype Leg Rope").GetComponent<Rigidbody2D>();
         _lineRenderer = GetComponent<LineRenderer>();
         ResetLength();
     }
