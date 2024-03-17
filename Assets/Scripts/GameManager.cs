@@ -152,7 +152,7 @@ public class GameManager : Singleton<GameManager>
     public void ExitReached()
     {
         if (currentGnome != null &&
-            currentGnome.holdingTreasure == true)
+            currentGnome.holdingTreasure)
         {
             var audio = GetComponent<AudioSource>();
             if (audio)
@@ -164,7 +164,7 @@ public class GameManager : Singleton<GameManager>
 
             if (gameOverMenu)
             {
-                gameOverMenu.gameObject.SetActive(false);
+                gameOverMenu.gameObject.SetActive(true);
             }
         }
     }
