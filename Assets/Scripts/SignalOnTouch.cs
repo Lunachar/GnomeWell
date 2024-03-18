@@ -11,7 +11,7 @@ public class SignalOnTouch : MonoBehaviour
 
     public bool playAudioOnTouch = true;
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
         SendSignal(collider.gameObject);
     }

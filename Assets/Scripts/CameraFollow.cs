@@ -28,7 +28,7 @@ public class CameraFollow : MonoBehaviour
 
             transform.position = newPosition;
         }
-
+    }
         void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.yellow;
@@ -42,5 +42,4 @@ public class CameraFollow : MonoBehaviour
             
             Gizmos.DrawLine(topPoint, bottomPoint);
         }
-    }
 }
