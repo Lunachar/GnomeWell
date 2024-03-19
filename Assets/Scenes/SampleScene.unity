@@ -326,7 +326,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 631392369}
-  m_RootOrder: 17
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &270524494
 GameObject:
@@ -481,12 +481,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305119881}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.939, y: -51.668, z: 0}
+  m_LocalPosition: {x: 2.939, y: -56.668, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 631392369}
-  m_RootOrder: 8
+  m_Father: {fileID: 1370169133}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &309882842
 GameObject:
@@ -641,6 +641,7 @@ GameObject:
   - component: {fileID: 318928880}
   - component: {fileID: 318928879}
   - component: {fileID: 318928878}
+  - component: {fileID: 318928884}
   m_Layer: 0
   m_Name: TreasurePresent
   m_TagString: Untagged
@@ -822,6 +823,102 @@ Transform:
   m_Father: {fileID: 631392369}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &318928884
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318928877}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: eaceb73c0bd984617befe2f18589fc0e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &339875667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,7 +1226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1813677879871715108, guid: 15f260dc4e5ca474da93805df5d5b173, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1813677879871715108, guid: 15f260dc4e5ca474da93805df5d5b173, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1718,9 +1815,6 @@ Transform:
   - {fileID: 1169893275}
   - {fileID: 1370169133}
   - {fileID: 318928883}
-  - {fileID: 1708212112}
-  - {fileID: 1080498950}
-  - {fileID: 305119883}
   - {fileID: 1681168117}
   - {fileID: 179082119}
   - {fileID: 314803497}
@@ -2279,6 +2373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 810612149}
   - component: {fileID: 810612148}
+  - component: {fileID: 810612150}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2306,8 +2401,8 @@ MonoBehaviour:
   gameplayMenu: {fileID: 1913777122}
   gameOverMenu: {fileID: 384290093}
   delayAfterDeath: 1
-  gnomeDiedSound: {fileID: 0}
-  gameOverSound: {fileID: 0}
+  gnomeDiedSound: {fileID: 8300000, guid: 070a45332512c4d5a8b481f70ac99e27, type: 3}
+  gameOverSound: {fileID: 8300000, guid: db3dc04db170d487ca696838ffc6c013, type: 3}
 --- !u!4 &810612149
 Transform:
   m_ObjectHideFlags: 0
@@ -2323,6 +2418,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &810612150
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810612147}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &954417058
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,9 +2655,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631392369}
     m_Modifications:
+    - target: {fileID: 1651667403665040307, guid: f66a39cab8f43864c96cb8630c694eab, type: 3}
+      propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 810612148}
+    - target: {fileID: 1651667403665040307, guid: f66a39cab8f43864c96cb8630c694eab, type: 3}
+      propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TrapTouched
+      objectReference: {fileID: 0}
     - target: {fileID: 4719758622664613520, guid: f66a39cab8f43864c96cb8630c694eab, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4719758622664613520, guid: f66a39cab8f43864c96cb8630c694eab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2782,12 +2981,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080498948}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.789, y: -51.668, z: 0}
+  m_LocalPosition: {x: -2.789, y: -56.668, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 631392369}
-  m_RootOrder: 7
+  m_Father: {fileID: 1370169133}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1169893274
 GameObject:
@@ -3085,7 +3284,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 631392369}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1279073676
 GameObject:
@@ -3224,9 +3423,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631392369}
     m_Modifications:
+    - target: {fileID: 1651667403665040307, guid: 7d8a6cf32c0dcb84b8c083671f2602a7, type: 3}
+      propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 810612148}
+    - target: {fileID: 1651667403665040307, guid: 7d8a6cf32c0dcb84b8c083671f2602a7, type: 3}
+      propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TrapTouched
+      objectReference: {fileID: 0}
     - target: {fileID: 4719758622664613520, guid: 7d8a6cf32c0dcb84b8c083671f2602a7, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4719758622664613520, guid: 7d8a6cf32c0dcb84b8c083671f2602a7, type: 3}
       propertyPath: m_LocalScale.x
@@ -3314,7 +3521,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1708212112}
+  - {fileID: 1080498950}
+  - {fileID: 305119883}
   m_Father: {fileID: 631392369}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3573,7 +3783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1813677879871715108, guid: 15f260dc4e5ca474da93805df5d5b173, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1813677879871715108, guid: 15f260dc4e5ca474da93805df5d5b173, type: 3}
       propertyPath: m_LocalScale.x
@@ -3622,6 +3832,14 @@ PrefabInstance:
     - target: {fileID: 1813677879871715108, guid: 15f260dc4e5ca474da93805df5d5b173, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813677880690995659, guid: 15f260dc4e5ca474da93805df5d5b173, type: 3}
+      propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 810612148}
+    - target: {fileID: 1813677880690995659, guid: 15f260dc4e5ca474da93805df5d5b173, type: 3}
+      propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TrapTouched
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15f260dc4e5ca474da93805df5d5b173, type: 3}
@@ -4060,7 +4278,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 631392369}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1708212110
 GameObject:
@@ -4119,7 +4337,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1531405227
   m_SortingLayer: -1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ae236c96e3b374b86bc5f677a3fffe57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4139,12 +4357,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708212110}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -51.803, z: 0}
+  m_LocalPosition: {x: 0, y: -56.803, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 631392369}
-  m_RootOrder: 6
+  m_Father: {fileID: 1370169133}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1724231571
 GameObject:
@@ -4230,9 +4448,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631392369}
     m_Modifications:
+    - target: {fileID: 1651667403665040307, guid: 7d8a6cf32c0dcb84b8c083671f2602a7, type: 3}
+      propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 810612148}
+    - target: {fileID: 1651667403665040307, guid: 7d8a6cf32c0dcb84b8c083671f2602a7, type: 3}
+      propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TrapTouched
+      objectReference: {fileID: 0}
     - target: {fileID: 4719758622664613520, guid: 7d8a6cf32c0dcb84b8c083671f2602a7, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4719758622664613520, guid: 7d8a6cf32c0dcb84b8c083671f2602a7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4432,7 +4658,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 631392369}
-  m_RootOrder: 18
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1913777121
 GameObject:
@@ -4686,7 +4912,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 631392369}
-  m_RootOrder: 16
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!4 &1622597078195316230 stripped
 Transform:
@@ -4790,12 +5016,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 631392369}
     m_Modifications:
     - target: {fileID: 1651667403665040307, guid: a85dfc0718d4b9f48bb12564e933090a, type: 3}
+      propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1651667403665040307, guid: a85dfc0718d4b9f48bb12564e933090a, type: 3}
       propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 810612148}
+    - target: {fileID: 1651667403665040307, guid: a85dfc0718d4b9f48bb12564e933090a, type: 3}
+      propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TrapTouched
+      objectReference: {fileID: 0}
+    - target: {fileID: 1651667403665040307, guid: a85dfc0718d4b9f48bb12564e933090a, type: 3}
+      propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1651667403665040307, guid: a85dfc0718d4b9f48bb12564e933090a, type: 3}
+      propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4719758622664613520, guid: a85dfc0718d4b9f48bb12564e933090a, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4719758622664613520, guid: a85dfc0718d4b9f48bb12564e933090a, type: 3}
       propertyPath: m_LocalPosition.x
