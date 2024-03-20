@@ -27,7 +27,7 @@ public class BodyPart : MonoBehaviour
         }
 
         var rigidbody = GetComponent<Rigidbody2D>();
-        if (rigidbody.IsSleeping())
+        if (rigidbody/*.IsSleeping()*/)
         {
             foreach (Joint2D joint in GetComponentsInChildren<Joint2D>())
             {

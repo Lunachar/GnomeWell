@@ -299,9 +299,9 @@ MonoBehaviour:
   holdingArm: {fileID: 5007153193562069251}
   deathPrefab: {fileID: 7562092576535944612, guid: 302f5807d25c2a5439b01adbd9f78914, type: 3}
   flameDeathPrefab: {fileID: 0}
-  ghostPrefab: {fileID: 0}
+  ghostPrefab: {fileID: 3639257665071999193, guid: 91bf51aab2133f34bba0873bd97f0d64, type: 3}
   delayBeforeRemoving: 3
-  delayBefoeReleasingGhost: 0.25
+  delayBeforeReleasingGhost: 0.25
   bloodFountainPrefab: {fileID: 3445599196595356422, guid: d82783db385e8eb49b226638ef353d80, type: 3}
 --- !u!1 &5007153192652318648
 GameObject:

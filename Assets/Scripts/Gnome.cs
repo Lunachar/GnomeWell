@@ -18,13 +18,14 @@ public class Gnome : MonoBehaviour
     public GameObject ghostPrefab;
 
     public float delayBeforeRemoving = 3.0f;
-    public float delayBefoeReleasingGhost = 0.25f;
+    public float delayBeforeReleasingGhost = 0.25f;
 
     public GameObject bloodFountainPrefab;
 
     private bool _dead = false;
 
     private bool _holdingTreasure = false;
+    private Vector3 _deathPosition;
 
     public bool holdingTreasure
     {
@@ -81,8 +82,11 @@ public class Gnome : MonoBehaviour
 
     public void DestroyGnome(DamageType type)
     {
+        _deathPosition = GameObject.Find("Prototype Body").transform.position;
         holdingTreasure = false;
         _dead = true;
+        
+        StartCoroutine(ReleaseGhost(_deathPosition));
 
         foreach (BodyPart part in GetComponentsInChildren<BodyPart>())
         {
@@ -133,20 +137,21 @@ public class Gnome : MonoBehaviour
         var remove = gameObject.AddComponent<RemoveAfterDelay>();
         remove.delay = delayBeforeRemoving;
 
-        StartCoroutine(ReleaseGhost());
+        //StartCoroutine(ReleaseGhost());
     }
 
-    IEnumerator ReleaseGhost()
+    public IEnumerator ReleaseGhost(Vector3 deathPosition)
     {
         if (ghostPrefab == null)
         {
             yield break;
         }
 
-        Instantiate(
-            ghostPrefab,
-            transform.position,
-            Quaternion.identity);
+        GameObject ghost = Instantiate(ghostPrefab, deathPosition, Quaternion.identity);
+        Rigidbody2D ghostRigidbody = ghost.GetComponent<Rigidbody2D>();
+        ghostRigidbody.velocity = new Vector2(0, 2);
+        Destroy(ghost, 2f);
+        yield return new WaitForSeconds(2f);
     }
 
 

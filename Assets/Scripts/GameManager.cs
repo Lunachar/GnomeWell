@@ -11,7 +11,7 @@ public class GameManager : Singleton<GameManager>
 
     public CameraFollow cameraFollow;
 
-    private Gnome currentGnome;
+    private Gnome _currentGnome;
 
     public GameObject gnomePrefab;
 
@@ -20,10 +20,10 @@ public class GameManager : Singleton<GameManager>
     public RectTransform gameplayMenu;
 
     public RectTransform gameOverMenu;
-    
+
     public bool gnomeInvicible { get; set; }
 
-    public float delayAfterDeath = 1.0f;
+    public float delayAfterDeath = 2.0f;
 
     public AudioClip gnomeDiedSound;
 
@@ -59,7 +59,7 @@ public class GameManager : Singleton<GameManager>
         }
 
         CreateNewGnome();
-        
+
         Time.timeScale = 1.0f;
     }
 
@@ -72,39 +72,38 @@ public class GameManager : Singleton<GameManager>
                 startingPoint.transform.position,
                 Quaternion.identity);
 
-        currentGnome = newGnome.GetComponent<Gnome>();
-        
+        _currentGnome = newGnome.GetComponent<Gnome>();
+
         rope.gameObject.SetActive(true);
 
-        rope.connectedObject = currentGnome.ropeBody;
-        
+        rope.connectedObject = _currentGnome.ropeBody;
+
         rope.ResetLength();
 
-        cameraFollow.target = currentGnome.cameraFollowTarget;
+        cameraFollow.target = _currentGnome.cameraFollowTarget;
     }
 
     void RemoveGnome()
     {
-        if (gnomeInvicible) 
+        if (gnomeInvicible)
             return;
-        
+
         rope.gameObject.SetActive(false);
 
         cameraFollow.target = null;
 
-        if (currentGnome != null)
+        if (_currentGnome != null)
         {
-            currentGnome.holdingTreasure = false;
+            _currentGnome.holdingTreasure = false;
 
-            currentGnome.gameObject.tag = "Untagged";
+            _currentGnome.gameObject.tag = "Untagged";
 
-            foreach (Transform child in currentGnome.transform)
+            foreach (Transform child in _currentGnome.transform)
             {
                 child.gameObject.tag = "Untagged";
             }
 
-            currentGnome = null;
-
+            _currentGnome = null;
         }
     }
 
@@ -115,13 +114,13 @@ public class GameManager : Singleton<GameManager>
         {
             audio.PlayOneShot(this.gnomeDiedSound);
         }
-        
-        currentGnome.ShowDamageEffect(damageType);
+
+        _currentGnome.ShowDamageEffect(damageType);
 
         if (gnomeInvicible == false)
         {
-            currentGnome.DestroyGnome(damageType);
-            
+            _currentGnome.DestroyGnome(damageType);
+
             RemoveGnome();
 
             StartCoroutine(ResetAfterDelay());
@@ -146,13 +145,13 @@ public class GameManager : Singleton<GameManager>
 
     public void TreasureCollected()
     {
-        currentGnome.holdingTreasure = true;
+        _currentGnome.holdingTreasure = true;
     }
 
     public void ExitReached()
     {
-        if (currentGnome != null &&
-            currentGnome.holdingTreasure)
+        if (_currentGnome != null &&
+            _currentGnome.holdingTreasure)
         {
             var audio = GetComponent<AudioSource>();
             if (audio)
@@ -164,6 +163,8 @@ public class GameManager : Singleton<GameManager>
 
             if (gameOverMenu)
             {
+                mainMenu.gameObject.SetActive(false);
+                gameplayMenu.gameObject.SetActive(false);
                 gameOverMenu.gameObject.SetActive(true);
             }
         }
@@ -185,11 +186,12 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    
     public void RestartGame()
     {
-        Destroy(currentGnome.gameObject);
-        currentGnome = null;
-        
+        Destroy(_currentGnome.gameObject);
+        _currentGnome = null;
+
         Reset();
     }
 }
