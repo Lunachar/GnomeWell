@@ -65,7 +65,7 @@ Transform:
   m_Children:
   - {fileID: 5579145065460764331}
   m_Father: {fileID: 5007153192538876222}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5007153192009772075
 SpriteRenderer:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 966ebe1b2d1694f46b8d2431909bd830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detachedSprite: {fileID: 0}
+  detachedSprite: {fileID: 21300000, guid: 16296a8f8be954235bc18fc5a20518cf, type: 3}
   burnedSprite: {fileID: 0}
   bloodFountainOrigin: {fileID: 5007153193246295688}
 --- !u!1 &5007153192054942282
@@ -270,9 +270,9 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5007153193329376902}
   - {fileID: 5007153193562069279}
   - {fileID: 5007153192009772071}
-  - {fileID: 5007153193329376902}
   - {fileID: 5007153193291779357}
   - {fileID: 5007153193324299862}
   - {fileID: 5007153192652318651}
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 966ebe1b2d1694f46b8d2431909bd830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detachedSprite: {fileID: 0}
+  detachedSprite: {fileID: 21300000, guid: e93188065d76f4346b397475472ede76, type: 3}
   burnedSprite: {fileID: 0}
   bloodFountainOrigin: {fileID: 5007153192488086994}
 --- !u!1 &5007153192805111055
@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 966ebe1b2d1694f46b8d2431909bd830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detachedSprite: {fileID: 0}
+  detachedSprite: {fileID: 21300000, guid: 2b198ff5f6b074e87a1008a5aa817eaf, type: 3}
   burnedSprite: {fileID: 0}
   bloodFountainOrigin: {fileID: 5007153192054942285}
 --- !u!1 &5007153193324299863
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 966ebe1b2d1694f46b8d2431909bd830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detachedSprite: {fileID: 0}
+  detachedSprite: {fileID: 21300000, guid: 8afa1c3dcf75d4b8eb95a65ceac96a4c, type: 3}
   burnedSprite: {fileID: 0}
   bloodFountainOrigin: {fileID: 5007153191888633061}
 --- !u!1 &5007153193329376898
@@ -864,7 +864,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5007153192538876222}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5007153193329376903
 SpriteRenderer:
@@ -980,7 +980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 966ebe1b2d1694f46b8d2431909bd830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detachedSprite: {fileID: 0}
+  detachedSprite: {fileID: 21300000, guid: 20e9587363bb44d9992ff9e371975b60, type: 3}
   burnedSprite: {fileID: 0}
   bloodFountainOrigin: {fileID: 0}
 --- !u!1 &5007153193562069276
@@ -1017,7 +1017,7 @@ Transform:
   m_Children:
   - {fileID: 5579145066011676663}
   m_Father: {fileID: 5007153192538876222}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5007153193562069251
 SpriteRenderer:
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 966ebe1b2d1694f46b8d2431909bd830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detachedSprite: {fileID: 0}
+  detachedSprite: {fileID: 21300000, guid: 38c4b3fe54b99498bbb449ea10e5516c, type: 3}
   burnedSprite: {fileID: 0}
   bloodFountainOrigin: {fileID: 5007153192805111054}
 --- !u!1 &5007153193684146979

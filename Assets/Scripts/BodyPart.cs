@@ -22,12 +22,10 @@ public class BodyPart : MonoBehaviour
 
     private void Update()
     {
-        if (detached == false) {
-            return;
-        }
+        if (!detached) return;
 
-        var rigidbody = GetComponent<Rigidbody2D>();
-        if (rigidbody/*.IsSleeping()*/)
+        var rigidbodyT = GetComponent<Rigidbody2D>();
+        if (rigidbodyT/*.IsSleeping()*/)
         {
             foreach (Joint2D joint in GetComponentsInChildren<Joint2D>())
             {
@@ -39,13 +37,20 @@ public class BodyPart : MonoBehaviour
                 Destroy(body);
             }
 
-            foreach (Collider2D collider in GetComponentsInChildren<Collider2D>())
+            foreach (Collider2D colliderT in GetComponentsInChildren<Collider2D>())
             {
-                Destroy(collider);
+                Destroy(colliderT);
             }
-            
+            Debug.Log($"{gameObject.name} is detached {detached}");
             Destroy(this);
+            Debug.Log($"{gameObject.name} is Destoyed");
+            Debug.Log($"{gameObject.transform.position.y}");
         }
+
+        // if (gameObject.transform.position.y < -0f)
+        // {
+        //     Destroy(this);
+        // }
     }
 
     public void ApplyDamageSprite(Gnome.DamageType damageType)
