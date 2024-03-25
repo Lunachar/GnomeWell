@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
 
     private AsyncOperation sceneLoadingOperation;
 
+    private float _delay = 1f;
+
     private void Start()
     {
         loadingOverlay.gameObject.SetActive(false);
@@ -25,6 +27,13 @@ public class MainMenu : MonoBehaviour
     {
         loadingOverlay.gameObject.SetActive(true);
 
+        StartCoroutine(ExecuteWithDelay());
+
         sceneLoadingOperation.allowSceneActivation = true;
+    }
+
+    IEnumerator ExecuteWithDelay()
+    {
+        yield return new WaitForSeconds(_delay);
     }
 }

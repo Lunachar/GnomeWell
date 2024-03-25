@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 
-public class ButtonSounds : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
+public class ButtonSounds : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerDownHandler
 {
     public AudioClip hoverSound;
     public AudioClip clickSound;
@@ -16,35 +17,40 @@ public class ButtonSounds : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
     private void Start()
     {
         _button = GetComponent<Button>();
+        
         _audioSource = GetComponent<AudioSource>();
 
         _audioSource.playOnAwake = false;
-
-        _button.onClick.AddListener(PlayClickSound);
-        
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (hoverSound != null && _button.interactable)
         {
-            _audioSource.PlayOneShot(hoverSound);
+            StartCoroutine(PlaySoundAndWait(hoverSound));
         }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (clickSound != null && _button.interactable)
-        {
-            _audioSource.PlayOneShot(clickSound);
-        }
+        // if (clickSound != null && _button.interactable)
+        // {
+        //     StartCoroutine(PlaySoundAndWait(clickSound));
+        // }
     }
-
-    void PlayClickSound()
+    public void OnPointerDown(PointerEventData eventData)
     {
         if (clickSound != null && _button.interactable)
         {
-            _audioSource.PlayOneShot(clickSound);
+            StartCoroutine(PlaySoundAndWait(clickSound));
         }
     }
+
+    private IEnumerator PlaySoundAndWait(AudioClip clip)
+    {
+        _audioSource.PlayOneShot(clip);
+        yield return new WaitForSecondsRealtime(clip.length);
+        Debug.Log($"sound is finishing playing");
+    }
+
 }
