@@ -54,6 +54,14 @@ public class GameManager : Singleton<GameManager>
             gameplayMenu.gameObject.SetActive(true);
         }
 
+        GameObject[] partsToDelete = GameObject.FindGameObjectsWithTag("Temp");
+        if (partsToDelete != null)
+        {
+            foreach (var part in partsToDelete)
+            {
+                Destroy(part);
+            }
+        }
         // Reset all objects that implement the Resettable interface.
         var resetObjects = FindObjectsOfType<Resettable>();
         foreach (Resettable r in resetObjects)

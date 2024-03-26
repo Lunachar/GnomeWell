@@ -21,7 +21,7 @@ public class BodyPart : MonoBehaviour
     public void Detach()
     {
         detached = true;
-        this.tag = "Untagged";
+        this.tag = "Temp";
         transform.SetParent(null, true);
     }
 
